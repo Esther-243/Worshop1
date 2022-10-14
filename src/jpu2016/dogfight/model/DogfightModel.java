@@ -1,7 +1,17 @@
 package jpu2016.dogfight.model;
 
-public interface IDogfightModel {
+import java.util.Observable;
+
+public class DogfightModel extends Observable implements IDogfightModel {
+	private Sky sky;
+	
+	public DogfightModel() {
+		this.sky= new Sky(null);
+	}
+	
 	public IArea getArea() {
+		IArea area;;
+		return area;
 	}
 	
 	public void builArea(Dimension dimension) {
@@ -21,7 +31,4 @@ public interface IDogfightModel {
 	
 	public void setMobilesHavesMoved() {
 	}
-	
-	
-
 }
